@@ -63,7 +63,7 @@ const _ = {
     if(!size){
       size = 1
     }
-    let chunkArray = []
+    const chunkArray = []
     for(let i = 0; i < array.length; i += size){
       let chunky = array.slice(i, i + size)
       chunkArray.push(chunky)
