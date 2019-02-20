@@ -49,17 +49,28 @@ const _ = {
     if(!number){
       number = 1
     }
-    newArray = array.slice(number)
-    return newArray
+    droppedArray = array.slice(number)
+    return droppedArray
   },
-  
-
-
+  dropWhile(array, predicate){
+     	let dropNumber = array.findIndex((element, index) => {
+      return !predicate(element, index, array)
+      })
+      let droppedArray = this.drop(array,dropNumber)
+      return droppedArray
+  },
+  chunk(array, size){
+    if(!size){
+      size = 1
+    }
+    let chunkArray = []
+    for(let i = 0; i < array.length; i += size){
+    let chunky = array.slice(i, i + size)
+    chunkArray.push(chunky)
+    }
+    return chunkArray
+  }
 };
-
-
-
-
 
 // Do not write or modify code below this line.
 module.exports = _;
