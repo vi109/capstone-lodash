@@ -34,8 +34,8 @@ const _ = {
     for (let key in object){
       let orgVal = object[key]
       newObject[orgVal] = key
-    	}
- 		return newObject
+    }
+    return newObject
   },
   findKey(object, predicate){
     for (let key in object){
@@ -53,11 +53,11 @@ const _ = {
     return droppedArray
   },
   dropWhile(array, predicate){
-     	let dropNumber = array.findIndex((element, index) => {
+    let dropNumber = array.findIndex((element, index) => {
       return !predicate(element, index, array)
-      })
-      let droppedArray = this.drop(array,dropNumber)
-      return droppedArray
+    })
+    let droppedArray = this.drop(array,dropNumber)
+    return droppedArray
   },
   chunk(array, size){
     if(!size){
@@ -65,8 +65,8 @@ const _ = {
     }
     let chunkArray = []
     for(let i = 0; i < array.length; i += size){
-    let chunky = array.slice(i, i + size)
-    chunkArray.push(chunky)
+      let chunky = array.slice(i, i + size)
+      chunkArray.push(chunky)
     }
     return chunkArray
   }
