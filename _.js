@@ -30,9 +30,9 @@ const _ = {
     return object[key] !== undefined
   },
   invert(object){
- 		let newObject = {}
-		for (let key in object){
-    	let orgVal = object[key]
+    let newObject = {}
+    for (let key in object){
+      let orgVal = object[key]
       newObject[orgVal] = key
     	}
  		return newObject
