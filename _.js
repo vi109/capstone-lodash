@@ -15,7 +15,7 @@ const _ = {
     return number >= start && number < end ? true : false
   },
   words(string){
-  return string.split(" ")
+    return string.split(" ")
   },
   pad(string, length){
     if(length <= string.length){
